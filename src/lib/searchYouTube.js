@@ -17,6 +17,6 @@ var searchYouTube = (options, callback) => {
     dataType: 'json'
   });
 
-}
+};
 
 window.searchYouTube = searchYouTube;

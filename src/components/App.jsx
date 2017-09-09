@@ -1,19 +1,19 @@
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       currentVideo: this.props.videos[0],
       videos: this.props.videos
-    }
+    };
     this.handleClick = this.handleClick.bind(this);
     this.callBack = this.callBack.bind(this);
     this.searchChangeHandler = this.searchChangeHandler.bind(this);
   }
 
-  componentDidMount(){
-    this.props.searchYouTube({max: 5, q: 'monopoly', key: window.YOUTUBE_API_KEY}, this.callBack)
+  componentDidMount() {
+    this.props.searchYouTube({max: 5, q: 'monopoly', key: window.YOUTUBE_API_KEY}, this.callBack);
   }
 
   callBack(data) {
@@ -25,8 +25,8 @@ class App extends React.Component {
       max: 5,
       q: query,
       key: window.YOUTUBE_API_KEY
-    }
-      window.searchYouTube(options, this.callBack);
+    };
+    window.searchYouTube(options, this.callBack);
   }
 
   render() {
@@ -46,7 +46,7 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   handleClick(video) {
