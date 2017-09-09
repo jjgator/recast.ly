@@ -13,7 +13,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    this.props.searchYouTube({max: 5, query: 'monopoly', key: window.YOUTUBE_API_KEY}, this.callBack)
+    this.props.searchYouTube({max: 5, q: 'monopoly', key: window.YOUTUBE_API_KEY}, this.callBack)
   }
 
   callBack(data) {
